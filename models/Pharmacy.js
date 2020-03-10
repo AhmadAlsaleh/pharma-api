@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 
 module.exports = (db) => {
-    const pharma = db.define('Pharmacy', {
+    const pharma = db.define('Pharma', {
         id: {
             type: Sequelize.UUID,
             primaryKey: true,
@@ -14,6 +14,8 @@ module.exports = (db) => {
         place: Sequelize.STRING,
         phone: Sequelize.STRING,
         email: Sequelize.STRING,
+        lat: Sequelize.DOUBLE,
+        lng: Sequelize.DOUBLE,
         isOpened: {
             type: Sequelize.BOOLEAN,
             defaultValue: false
